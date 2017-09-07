@@ -7,6 +7,8 @@ Author: Daniel Kroening, kroening@kroening.com
 \*******************************************************************/
 
 #include "ansi_c_entry_point.h"
+#include "c_types.h"
+#include "c_nondet_symbol_factory.h"
 
 #include <cassert>
 #include <cstdlib>
@@ -20,13 +22,10 @@ Author: Daniel Kroening, kroening@kroening.com
 #include <util/prefix.h>
 #include <util/symbol.h>
 
-#include <util/c_types.h>
 #include <ansi-c/string_constant.h>
 
 #include <goto-programs/goto_functions.h>
 #include <linking/static_lifetime_init.h>
-
-#include "c_nondet_symbol_factory.h"
 
 exprt::operandst build_function_environment(
   const code_typet::parameterst &parameters,
